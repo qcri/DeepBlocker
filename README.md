@@ -38,7 +38,7 @@ right_df = pd.read_csv("right_table_csv_file_name")
 ```python
 tuple_embedding_model = AutoEncoderTupleEmbedding()
 topK_vector_pairing_model = ExactTopKVectorPairing(K=50)
-db = DeepBlocker(tuple_embedding_model, vector_pairing_model)
+db = DeepBlocker(tuple_embedding_model, topK_vector_pairing_model)
 ```
 
 4. Train the models and perform blocking of the tables. Report the accuracy.
