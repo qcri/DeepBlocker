@@ -40,7 +40,7 @@ if __name__ == "__main__":
     print(statistics_dict)
 
     print("using Hybrid embedding")
-    tuple_embedding_model = CTTTupleEmbedding()
+    tuple_embedding_model = HybridTupleEmbedding()
     topK_vector_pairing_model = ExactTopKVectorPairing(K=50)
     statistics_dict = do_blocking(folder_root, left_table_fname, right_table_fname, cols_to_block, tuple_embedding_model, topK_vector_pairing_model)
     print(statistics_dict)
